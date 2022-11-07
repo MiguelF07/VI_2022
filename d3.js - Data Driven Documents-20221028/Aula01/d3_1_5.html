@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+           <html lang="en">
+               <head>
+                   <meta charset="utf-8">
+                   <title>Primeiro exemplo d3</title>
+                   <script type="text/javascript"
+           src="http://d3js.org/d3.v5.js"></script>
+               </head>
+               <body>
+                   <!-- <script type="text/javascript">
+                       var dataset = [ 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 ];
+                        d3.select("body").selectAll("p")
+                                .data(dataset)
+                                .enter()
+                                .append("p")
+                                .text("New paragraph!");
+                   </script> -->
+                   <!-- <script type="text/javascript">
+                    var dataset = [ 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 ];
+                    d3.select("body").selectAll("p")
+                            .data(dataset)
+                            .enter()
+                            .append("p")
+                            .text(function (d) {
+                            return "I can count up to " + d;
+                            });
+                    </script> -->
+                    <script type="text/javascript">
+                       var dataset = [ 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 ];
+                        d3.select("body").selectAll("p")
+                                .data(dataset)
+                                .enter()
+                                .append("p")
+                                .text("New paragraph!")
+                                .style("color", function (d) {
+                                    if (d<=15) {
+                                        console.log(d)
+                                        return "black";
+                                    }
+                                    else {
+                                        return "red";
+                                    }
+                                })
+                                .style("font-size", function (d) {
+                                    return d + "px";
+                                });
+                   </script>
+               </body>
+           </html>
